@@ -36,7 +36,7 @@ class Destroyer
   def total_hits(enumerator)
     click = 0
     enumerator.inject(0) do |sum, idx|
-      sum += (hit?(idx, click) ? 1 : 0)
+      sum += 1 if hit?(idx, click)
       click += 1
       sum
     end
